@@ -19,7 +19,7 @@
     app.initialize();
 
     var db = window.openDatabase("Database", "1.0", "agenda", 2000000);
-
+    db.transaction(createDB, errorDB, successDB);
     document.addEventListener("deviceready", onDeviceReady, false);
     
     function onDeviceReady(){
